@@ -1,147 +1,147 @@
 [
   {
     "name": "Angry Birds",
-    "path": "games/Angry Birds.html",
-    "icon": "angry_birds.png"
+    "path": "Angry Birds.html",
+    "icon": "icons/angry_birds.png"
   },
   {
     "name": "Bad Piggies",
-    "path": "games/Bad Piggies.html",
-    "icon": "bad_piggies.png"
+    "path": "Bad Piggies.html",
+    "icon": "icons/bad_piggies.png"
   },
   {
     "name": "Baldi's Basics",
-    "path": "games/Baldis Basics.html",
-    "icon": "baldis_basics.png"
+    "path": "Baldis Basics.html",
+    "icon": "icons/baldis_basics.png"
   },
   {
     "name": "Basketball Stars",
-    "path": "games/Basketball Stars.html",
-    "icon": "basketball_stars.png"
+    "path": "Basketball Stars.html",
+    "icon": "icons/basketball_stars.png"
   },
   {
     "name": "Block Blast",
-    "path": "games/Block Blast.html",
-    "icon": "block_blast.png"
+    "path": "Block Blast.html",
+    "icon": "icons/block_blast.png"
   },
   {
     "name": "Bowmasters",
-    "path": "games/Bow Masters.html",
-    "icon": "bow_masters.png"
+    "path": "Bow Masters.html",
+    "icon": "icons/bow_masters.png"
   },
   {
     "name": "Brawl Stars",
-    "path": "games/Brawl Stars.html",
-    "icon": "brawl_stars.png"
+    "path": "Brawl Stars.html",
+    "icon": "icons/brawl_stars.png"
   },
   {
     "name": "Cluster Rush",
-    "path": "games/Cluster Rush.html",
-    "icon": "cluster_rush.png"
+    "path": "Cluster Rush.html",
+    "icon": "icons/cluster_rush.png"
   },
   {
     "name": "Cookie Clicker",
-    "path": "games/Cookie Clicker.html",
-    "icon": "cookie_clicker.png"
+    "path": "Cookie Clicker.html",
+    "icon": "icons/cookie_clicker.png"
   },
   {
     "name": "Crossy Road",
-    "path": "games/Crossy Road.html",
-    "icon": "crossy_road.png"
+    "path": "Crossy Road.html",
+    "icon": "icons/crossy_road.png"
   },
   {
     "name": "DOOM",
-    "path": "games/Doom.html",
-    "icon": "doom.png"
+    "path": "Doom.html",
+    "icon": "icons/doom.png"
   },
   {
     "name": "Five Nights at Epstein's",
-    "path": "games/Five Nights At Epsteins.html",
-    "icon": "five_nights_at_epsteins.png"
+    "path": "Five Nights At Epsteins.html",
+    "icon": "icons/five_nights_at_epsteins.png"
   },
   {
     "name": "Five Nights at Freddy's",
-    "path": "games/Five Nights At Freddys.html",
-    "icon": "fnaf1.png"
+    "path": "Five Nights At Freddys.html",
+    "icon": "icons/fnaf1.png"
   },
   {
     "name": "Five Nights at Freddy's 2",
-    "path": "games/Five Nights At Freddys 2.html",
-    "icon": "fnaf2.png"
+    "path": "Five Nights At Freddys 2.html",
+    "icon": "icons/fnaf2.png"
   },
   {
     "name": "Geometry Dash",
-    "path": "games/Geometry Dash.html",
-    "icon": "geometry_dash.svg"
+    "path": "Geometry Dash.html",
+    "icon": "icons/geometry_dash.svg"
   },
   {
     "name": "Chrome Dino",
-    "path": "games/Google Dino.html",
-    "icon": "google_dino.png"
+    "path": "Google Dino.html",
+    "icon": "icons/google_dino.png"
   },
   {
     "name": "Granny",
-    "path": "games/Granny.html",
-    "icon": "granny.png"
+    "path": "Granny.html",
+    "icon": "icons/granny.png"
   },
   {
     "name": "Helix Jump",
-    "path": "games/Helix Jump.html",
-    "icon": "helix_jump.png"
+    "path": "Helix Jump.html",
+    "icon": "icons/helix_jump.png"
   },
   {
     "name": "Hypper Sandbox",
-    "path": "games/Hypper Sandbox.html",
-    "icon": "hypper_sandbox.png"
+    "path": "Hypper Sandbox.html",
+    "icon": "icons/hypper_sandbox.png"
   },
   {
     "name": "Minecraft",
-    "path": "games/Minecraft.html",
-    "icon": "minecraft.png"
+    "path": "Minecraft.html",
+    "icon": "icons/minecraft.png"
   },
   {
     "name": "Moto X3M",
-    "path": "games/Moto X3m.html",
-    "icon": "moto_x3m.png"
+    "path": "Moto X3m.html",
+    "icon": "icons/moto_x3m.png"
   },
   {
     "name": "Obby 99% Will Lose",
-    "path": "games/Obby 99% will lose.html",
-    "icon": "obby.png"
+    "path": "Obby 99% will lose.html",
+    "icon": "icons/obby.png"
   },
   {
     "name": "OvO",
-    "path": "games/OvO.html",
-    "icon": "ovo.png"
+    "path": "OvO.html",
+    "icon": "icons/ovo.png"
   },
   {
     "name": "Plants vs. Zombies",
-    "path": "games/Plants VS Zombies.html",
-    "icon": "pvz.png"
+    "path": "Plants VS Zombies.html",
+    "icon": "icons/pvz.png"
   },
   {
     "name": "Raldi's Crackhouse",
-    "path": "games/Raldis Crackhouse.html",
-    "icon": "raldis_crackhouse.png"
+    "path": "Raldis Crackhouse.html",
+    "icon": "icons/raldis_crackhouse.png"
   },
   {
     "name": "Retro Bowl",
-    "path": "games/Retro Bowl.html",
-    "icon": "retro_bowl.png"
+    "path": "Retro Bowl.html",
+    "icon": "icons/retro_bowl.png"
   },
   {
     "name": "Snow Rider 3D",
-    "path": "games/Snow Rider.html",
-    "icon": "snow_rider.png"
+    "path": "Snow Rider.html",
+    "icon": "icons/snow_rider.png"
   },
   {
     "name": "Subway Surfers: St. Petersburg",
-    "path": "games/Subway Surfers: St .Petersburg.html",
-    "icon": "subway_surfers.png"
+    "path": "Subway Surfers: St .Petersburg.html",
+    "icon": "icons/subway_surfers.png"
   },
   {
     "name": "Wordle",
-    "path": "games/Wordle.html",
-    "icon": "wordle.png"
+    "path": "Wordle.html",
+    "icon": "icons/wordle.png"
   }
 ]
