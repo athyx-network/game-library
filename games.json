@@ -1,5 +1,10 @@
 [
   {
+    "name": "2048",
+    "path": "2048.html",
+    "icon": "icons/2048.png"
+  },
+  {
     "name": "Angry Birds",
     "path": "Angry Birds.html",
     "icon": "icons/angry_birds.png"
@@ -15,6 +20,11 @@
     "icon": "icons/baldis_basics.png"
   },
   {
+    "name": "Baldi's Basics: Ultra Decompile",
+    "path": "Baldi Ultra Decompile.html",
+    "icon": "icons/baldi_ultra_decompile.png"
+  },
+  {
     "name": "Basketball Stars",
     "path": "Basketball Stars.html",
     "icon": "icons/basketball_stars.png"
@@ -25,6 +35,11 @@
     "icon": "icons/block_blast.png"
   },
   {
+    "name": "Bloxorz",
+    "path": "Bloxorz.html",
+    "icon": "icons/bloxorz.png"
+  },
+  {
     "name": "Bowmasters",
     "path": "Bow Masters.html",
     "icon": "icons/bow_masters.png"
@@ -33,6 +48,11 @@
     "name": "Brawl Stars",
     "path": "Brawl Stars.html",
     "icon": "icons/brawl_stars.png"
+  },
+  {
+    "name": "Chrome Dino",
+    "path": "Google Dino.html",
+    "icon": "icons/google_dino.png"
   },
   {
     "name": "Cluster Rush",
@@ -50,9 +70,24 @@
     "icon": "icons/crossy_road.png"
   },
   {
+    "name": "Doodle Jump",
+    "path": "Doodle Jump.html",
+    "icon": "icons/doodle_jump.png"
+  },
+  {
     "name": "DOOM",
     "path": "Doom.html",
     "icon": "icons/doom.png"
+  },
+  {
+    "name": "Drift Boss",
+    "path": "Drift Boss.html",
+    "icon": "icons/drift_boss.png"
+  },
+  {
+    "name": "Duck Life",
+    "path": "Duck Life.html",
+    "icon": "icons/duck_life.png"
   },
   {
     "name": "Five Nights at Epstein's",
@@ -75,11 +110,6 @@
     "icon": "icons/geometry_dash.svg"
   },
   {
-    "name": "Chrome Dino",
-    "path": "Google Dino.html",
-    "icon": "icons/google_dino.png"
-  },
-  {
     "name": "Granny",
     "path": "Granny.html",
     "icon": "icons/granny.png"
@@ -93,6 +123,11 @@
     "name": "Hypper Sandbox",
     "path": "Hypper Sandbox.html",
     "icon": "icons/hypper_sandbox.png"
+  },
+  {
+    "name": "Just Fall.LOL",
+    "path": "Just Fall.lol.html",
+    "icon": "icons/just_fall.png"
   },
   {
     "name": "Minecraft",
@@ -115,6 +150,11 @@
     "icon": "icons/ovo.png"
   },
   {
+    "name": "Paper.io 2",
+    "path": "Paper.io.html",
+    "icon": "icons/paper_io.png"
+  },
+  {
     "name": "Plants vs. Zombies",
     "path": "Plants VS Zombies.html",
     "icon": "icons/pvz.png"
@@ -125,9 +165,34 @@
     "icon": "icons/raldis_crackhouse.png"
   },
   {
+    "name": "Red Ball 4",
+    "path": "Red Ball 4.html",
+    "icon": "icons/red_ball_4.png"
+  },
+  {
     "name": "Retro Bowl",
     "path": "Retro Bowl.html",
     "icon": "icons/retro_bowl.png"
+  },
+  {
+    "name": "Riddle School",
+    "path": "Riddle School.html",
+    "icon": "icons/riddle_school.png"
+  },
+  {
+    "name": "Riddle School 2",
+    "path": "Riddle School 2.html",
+    "icon": "icons/riddle_school_2.png"
+  },
+  {
+    "name": "Riddle School 3",
+    "path": "Riddle School 3.html",
+    "icon": "icons/riddle_school_3.png"
+  },
+  {
+    "name": "Slope 2",
+    "path": "Slope 2.html",
+    "icon": "icons/slope_2.png"
   },
   {
     "name": "Snow Rider 3D",
@@ -138,6 +203,36 @@
     "name": "Subway Surfers: St. Petersburg",
     "path": "Subway Surfers: St .Petersburg.html",
     "icon": "icons/subway_surfers.png"
+  },
+  {
+    "name": "Super Mario Bros",
+    "path": "Super Mario Bross.html",
+    "icon": "icons/super_mario_bros.png"
+  },
+  {
+    "name": "Tag",
+    "path": "Tag.html",
+    "icon": "icons/tag.png"
+  },
+  {
+    "name": "The Impossible Quiz",
+    "path": "Impossible Quiz.html",
+    "icon": "icons/impossible_quiz.png"
+  },
+  {
+    "name": "The World's Hardest Game",
+    "path": "World's Hardest Game.html",
+    "icon": "icons/worlds_hardest_game.png"
+  },
+  {
+    "name": "Tomb of the Mask",
+    "path": "Tomb Of The Mask.html",
+    "icon": "icons/tomb_of_the_mask.png"
+  },
+  {
+    "name": "Undertale Yellow",
+    "path": "Undertale Yellow.html",
+    "icon": "icons/undertale_yellow.png"
   },
   {
     "name": "Wordle",

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<!-- Ultimate Game Stash file--> 
+<!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
+
+<html lang="en-us">
+<base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@104c364f36401fd94165923f6b5a76c113e3540e/baldi%20decomp/">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Baldi's Basics The Ultra Decompile</title>
+  <link type="image/png" href="TemplateData/favicon.png" rel="icon">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <link rel="apple-touch-icon" href="TemplateData/AppIcon.png">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-title" content="Baldi's Basics Ultra Decompile">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="white">
+
+  <style>
+    /* Custom Loading Screen Overlay - Simple Gray */
+    #custom-loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      user-select: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .loading-card {
+      background: #1e1e1e;
+      border: 1px solid #383838;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      padding: 28px 36px;
+      text-align: center;
+      max-width: 480px;
+      width: 90%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .baldi-avatar {
+      width: 120px;
+      height: 110px;
+      margin-bottom: 14px;
+      background: url('TemplateData/LoadingHead.gif') no-repeat center;
+      background-size: contain;
+    }
+
+    .loading-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #eeeeee;
+      margin-bottom: 6px;
+    }
+
+    .loading-status {
+      font-size: 14px;
+      color: #999999;
+      margin-bottom: 16px;
+      min-height: 20px;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 18px;
+      background: #141414;
+      border-radius: 9px;
+      border: 1px solid #333333;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #7e7e7e;
+      border-radius: 9px;
+      transition: width 0.15s ease-out;
+    }
+
+    .progress-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      font-size: 13px;
+      color: #aaaaaa;
+    }
+
+    .progress-percent {
+      color: #dddddd;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .loading-tip {
+      margin-top: 14px;
+      font-size: 12px;
+      color: #777777;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Custom Loading Screen Overlay -->
+  <div id="custom-loading-overlay">
+    <div class="loading-card">
+      <div class="baldi-avatar"></div>
+      <div class="loading-title">Baldi's Basics The Ultra Decompile</div>
+      <div id="custom-loading-status" class="loading-status">Downloading game assets...</div>
+      <div class="progress-track">
+        <div id="custom-progress-fill" class="progress-fill"></div>
+      </div>
+      <div class="progress-info">
+        <span id="custom-progress-bytes">0.0 MB / 156.2 MB</span>
+        <span id="custom-progress-percent" class="progress-percent">0.0%</span>
+      </div>
+      <div class="loading-tip">"dhfdkseghbdskguh its not misery its phonkity and gubbity☠️"</div>
+    </div>
+  </div>
+
+  <div id="unity-container" class="unity-desktop">
+    <canvas id="unity-canvas" width=1024 height=576></canvas>
+    <div id="unity-loading-bar" style="display: none !important;">
+      <div id="unity-logo"></div>
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
+      </div>
+    </div>
+    <div id="unity-warning"> </div>
+  </div>
+
+  <script>
+    function isStandalone() {
+      return (window.navigator.standalone === true) || window.matchMedia("(display-mode: fullscreen)").matches || window.matchMedia("(display-mode: standalone)").matches;
+    }
+
+    function isMobile() {
+      if (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2) return true;
+      return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    }
+
+    function isIOS() {
+      if (navigator.userAgent.match(/Mac/) && navigator.maxTouchPoints && navigator.maxTouchPoints > 2) return true;
+      return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    window.addEventListener("load", function() {
+      if ("serviceWorker" in navigator && (isStandalone() || (isMobile() && !isIOS()))) {
+        navigator.serviceWorker.register("ServiceWorker.js");
+      }
+    });
+
+    var container = document.querySelector("#unity-container");
+    var canvas = document.querySelector("#unity-canvas");
+    var loadingBar = document.querySelector("#unity-loading-bar");
+    var progressBarFull = document.querySelector("#unity-progress-bar-full");
+    var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+    var warningBanner = document.querySelector("#unity-warning");
+
+    const customOverlay = document.getElementById("custom-loading-overlay");
+    const customProgressFill = document.getElementById("custom-progress-fill");
+    const customProgressBytes = document.getElementById("custom-progress-bytes");
+    const customProgressPercent = document.getElementById("custom-progress-percent");
+    const customLoadingStatus = document.getElementById("custom-loading-status");
+
+    // Total file size across 9 data parts + 2 wasm parts = 163,755,817 bytes (~156.17 MB)
+    const knownTotalBytes = 163755817;
+    let totalLoadedBytes = 0;
+
+    function formatSize(bytes) {
+      if (bytes >= 1024 * 1024 * 1024) {
+        return (bytes / (1024 * 1024 * 1024)).toFixed(2) + " GB";
+      } else if (bytes >= 1024 * 1024) {
+        return (bytes / (1024 * 1024)).toFixed(1) + " MB";
+      } else if (bytes >= 1024) {
+        return (bytes / 1024).toFixed(1) + " KB";
+      } else {
+        return bytes + " B";
+      }
+    }
+
+    function updateLoadingProgress(fraction, statusText) {
+      const clamped = Math.min(1, Math.max(0, fraction));
+      const percentStr = (clamped * 100).toFixed(1) + "%";
+      if (customProgressFill) customProgressFill.style.width = percentStr;
+      if (customProgressPercent) customProgressPercent.textContent = percentStr;
+      if (customProgressBytes) customProgressBytes.textContent = `${formatSize(totalLoadedBytes)} / ${formatSize(knownTotalBytes)}`;
+      if (statusText && customLoadingStatus) customLoadingStatus.textContent = statusText;
+    }
+
+    function unityShowBanner(msg, type) {
+      function updateBannerVisibility() {
+        warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+      }
+      var div = document.createElement('div');
+      div.innerHTML = msg;
+      warningBanner.appendChild(div);
+      if (type == 'error') div.style = 'background: red; padding: 10px;';
+      else {
+        if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+        setTimeout(function() {
+          warningBanner.removeChild(div);
+          updateBannerVisibility();
+        }, 5000);
+      }
+      updateBannerVisibility();
+    }
+
+    async function fetchPartWithProgress(url) {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to load ${url}: HTTP ${response.status}`);
+      }
+      const reader = response.body.getReader();
+      const chunks = [];
+      let received = 0;
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        received += value.length;
+        totalLoadedBytes += value.length;
+        chunks.push(value);
+        // Asset download stage corresponds to 0% -> 90%
+        const downloadFraction = (totalLoadedBytes / knownTotalBytes) * 0.90;
+        updateLoadingProgress(downloadFraction, "Downloading game assets...");
+      }
+      const fullBuffer = new Uint8Array(received);
+      let offset = 0;
+      for (const chunk of chunks) {
+        fullBuffer.set(chunk, offset);
+        offset += chunk.length;
+      }
+      return fullBuffer.buffer;
+    }
+
+    async function mergeFiles(fileParts) {
+      const buffers = await Promise.all(fileParts.map(fetchPartWithProgress));
+      const mergedBlob = new Blob(buffers);
+      return URL.createObjectURL(mergedBlob);
+    }
+
+    function getParts(file, start, end) {
+      let parts = [];
+      for (let i = start; i <= end; i++) {
+        parts.push(file + ".part" + i);
+      }
+      return parts;
+    }
+
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/HTML.loader.js";
+
+    // Setup viewport & responsiveness immediately
+    if (isMobile() || isStandalone()) {
+      var meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      document.getElementsByTagName('head')[0].appendChild(meta);
+      container.className = "unity-mobile";
+      canvas.style.width = '100%';
+      canvas.style.height = '100%';
+    } else {
+      canvas.style.width = "1024px";
+      canvas.style.height = "576px";
+      if (!location.hostname.includes("gamejolt") && !window.location.toString().includes("m=1")) {
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+      }
+    }
+
+    // Start downloading all 11 parts in parallel with real-time progress
+    Promise.all([
+      mergeFiles(getParts("Build/HTML.data.unityweb", 1, 9)),
+      mergeFiles(getParts("Build/HTML.wasm.unityweb", 1, 2))
+    ]).then(([dataUrl, wasmUrl]) => {
+      container.hidden = false;
+      updateLoadingProgress(0.92, "Initializing Unity Engine...");
+
+      var config = {
+        dataUrl: dataUrl,
+        frameworkUrl: buildUrl + "/HTML.framework.js.unityweb",
+        codeUrl: wasmUrl,
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "SmashGames",
+        productName: "Kindergarten2",
+        productVersion: "2.00",
+        showBanner: unityShowBanner,
+      };
+
+      if (isMobile() && !/Android/i.test(navigator.userAgent) && !isStandalone()) {
+        unityShowBanner(window.self !== window.top ? "Scroll to the Install Instructions on how to play." : "Begin the game by adding it to Home Screen and running it there.", "warning");
+        if (customOverlay) customOverlay.style.display = "none";
+        canvas.style.display = "none";
+        throw new Error("Add to Home Screen to begin.");
+      }
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          // Map Unity init progress (0 to 1) from 92% to 100%
+          const overall = 0.92 + (progress * 0.08);
+          updateLoadingProgress(overall, "Starting Baldi's Basics...");
+        }).then((unityInstance) => {
+          updateLoadingProgress(1.0, "Ready!");
+          if (customOverlay) {
+            customOverlay.style.opacity = "0";
+            setTimeout(() => {
+              customOverlay.style.display = "none";
+            }, 500);
+          }
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    }).catch((error) => {
+      console.error("Failed to load game files:", error);
+      unityShowBanner("Failed to load game files: " + error, "error");
+      if (customLoadingStatus) {
+        customLoadingStatus.style.color = "#ff4d4f";
+        customLoadingStatus.textContent = "Failed to load game files. Please check your connection and refresh.";
+      }
+    });
+  </script>
+</body>
+</html>
