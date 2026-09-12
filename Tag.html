@@ -2,30 +2,40 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<base href="https://cdn.jsdelivr.net/gh/athyx-network/game-library@main/tag/">
 	<title>Tag</title>
+	<meta name="robots" content="noindex,nofollow" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<meta name="generator" content="Scirra Construct">
+	<meta name="author" content="jet">
+	<meta name="description" content="jet">
+	<link rel="manifest" href="appmanifest.json">
+	<link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
 	<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/athyx-network/game-library@main/icons/tag.png">
+	<link rel="stylesheet" href="style.css">
 	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		html, body {
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			background-color: #000;
-		}
-		#game-frame {
-			width: 100vw;
-			height: 100vh;
-			border: none;
-			display: block;
-		}
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		html, body { width: 100%; height: 100%; overflow: hidden; background-color: #000; }
 	</style>
 </head>
 <body>
-	<iframe id="game-frame" src="https://cdn.jsdelivr.net/gh/athyx-network/game-library@main/tag/index.html" allowfullscreen="true" allow="autoplay; fullscreen; gamepad"></iframe>
+	<script>
+		if (location.protocol.substr(0, 4) === "file") {
+			alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+		}
+	</script>
+	<script src="poki-sdk.js"></script>
+	<noscript>
+		<div id="notSupportedWrap">
+			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
+			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+		</div>
+	</noscript>
+	<script src="scripts/supportcheck.js"></script>
+	<script src="scripts/offlineclient.js" type="module"></script>
+	<script src="scripts/main.js" type="module"></script>
+	<script src="scripts/register-sw.js" type="module"></script>
 </body>
 </html>
