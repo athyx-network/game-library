@@ -3,7 +3,6 @@
 
 <head>
 	<meta charset="UTF-8">
-	<base href="https://cdn.jsdelivr.net/gh/athyx-network/game-library@main/tag/">
 	<title>Tag</title>
 	<meta name="robots" content="noindex,nofollow" />
 	<meta name="viewport"
@@ -19,12 +18,92 @@
 	<link rel="icon" type="image/png" href="icons/icon-512.png">
 
 	<link rel="stylesheet" href="style.css">
+	<style>
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		html, body { width: 100%; height: 100%; overflow: hidden; background-color: #000; }
 
+		#athyx-loading-screen {
+			position: fixed;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			background: #000;
+			z-index: 999999;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: opacity 0.5s ease;
+		}
 
+		#athyx-loading-screen.fade-out {
+			opacity: 0;
+			pointer-events: none;
+		}
+
+		#athyx-logo {
+			max-width: 40%;
+			max-height: 40%;
+			margin-bottom: 30px;
+		}
+
+		#athyx-bar-wrap {
+			width: 300px;
+			height: 12px;
+			background: #222;
+			border-radius: 6px;
+			overflow: hidden;
+			border: 1px solid #444;
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+		}
+
+		#athyx-bar-inner {
+			width: 0%;
+			height: 100%;
+			background: #fff;
+			transition: width 0.3s ease;
+		}
+
+		#athyx-credit {
+			margin-top: 14px;
+			color: #fff;
+			font-family: system-ui, -apple-system, sans-serif;
+			font-size: 13px;
+			letter-spacing: 0.04em;
+		}
+	</style>
 </head>
 
 <body>
-
+	<div id="athyx-loading-screen">
+		<img id="athyx-logo" src="https://cdn.jsdelivr.net/gh/athyx-network/athyx-game-lib@main/Surf%20Go/logo.png" alt="Athyx Network" />
+		<div id="athyx-bar-wrap">
+			<div id="athyx-bar-inner"></div>
+		</div>
+		<p id="athyx-credit">Ported by Athyx Network</p>
+	</div>
+	<script>
+		(function () {
+			var progress = 0;
+			var iv = setInterval(function () {
+				progress += (90 - progress) * 0.1;
+				var bar = document.getElementById("athyx-bar-inner");
+				if (bar) bar.style.width = progress + "%";
+			}, 200);
+			window.addEventListener("load", function () {
+				clearInterval(iv);
+				var bar = document.getElementById("athyx-bar-inner");
+				if (bar) bar.style.width = "100%";
+				setTimeout(function () {
+					var screen = document.getElementById("athyx-loading-screen");
+					if (screen) {
+						screen.classList.add("fade-out");
+						setTimeout(function () { if (screen.parentNode) screen.parentNode.removeChild(screen); }, 550);
+					}
+				}, 300);
+			});
+		})();
+	</script>
 	<script>
 		if (location.protocol.substr(0, 4) === "file")
 {

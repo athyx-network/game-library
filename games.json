@@ -30,6 +30,11 @@
     "icon": "icons/basketball_stars.png"
   },
   {
+    "name": "BitLife",
+    "path": "clbitlife.html",
+    "icon": "icons/bitlife.png"
+  },
+  {
     "name": "Block Blast",
     "path": "Block Blast.html",
     "icon": "icons/block_blast.png"
@@ -195,9 +200,19 @@
     "icon": "icons/slope_2.png"
   },
   {
+    "name": "Smash Karts",
+    "path": "Smash Karts.html",
+    "icon": "icons/smash_karts.png"
+  },
+  {
     "name": "Snow Rider 3D",
     "path": "Snow Rider.html",
     "icon": "icons/snow_rider.png"
+  },
+  {
+    "name": "Soccer Random",
+    "path": "Soccer Random.html",
+    "icon": "icons/soccer_random.png"
   },
   {
     "name": "Subway Surfers: St. Petersburg",
@@ -208,6 +223,11 @@
     "name": "Super Mario Bros",
     "path": "Super Mario Bross.html",
     "icon": "icons/super_mario_bros.png"
+  },
+  {
+    "name": "Surf GO",
+    "path": "Surf Go.html",
+    "icon": "icons/surf_go.png"
   },
   {
     "name": "Tag",
@@ -233,6 +253,11 @@
     "name": "Undertale Yellow",
     "path": "Undertale Yellow.html",
     "icon": "icons/undertale_yellow.png"
+  },
+  {
+    "name": "Volley Random",
+    "path": "Volley Random.html",
+    "icon": "icons/volley_random.png"
   },
   {
     "name": "Wordle",
