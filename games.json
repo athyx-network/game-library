@@ -270,13 +270,13 @@
     "icon": "icons/tag.png"
   },
   {
-    "name": "Baldi\"s Fun New School",
-    "path": "Baldi\"s Fun New School.html",
+    "name": "Baldi's Fun New School",
+    "path": "Baldi's Fun New School.html",
     "icon": "icons/baldis_fun_new_school.png"
   },
   {
-    "name": "Baldi\"s Basics Plus",
-    "path": "Baldi\"s Basics Plus.html",
+    "name": "Baldi's Basics Plus",
+    "path": "Baldi's Basics Plus.html",
     "icon": "icons/baldis_basics_plus.png"
   },
   {
@@ -285,8 +285,8 @@
     "icon": "icons/space_waves.png"
   },
   {
-    "name": "Baldi\"s Basics Remastered",
-    "path": "Baldi\"s Basics Remastered.html",
+    "name": "Baldi's Basics Remastered",
+    "path": "Baldi's Basics Remastered.html",
     "icon": "icons/baldis_basics_remastered.png"
   }
 ]
