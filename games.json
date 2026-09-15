@@ -272,12 +272,12 @@
   {
     "name": "Baldi\"s Fun New School",
     "path": "Baldi\"s Fun New School.html",
-    "icon": "icons/baldis_fun_new_school.jpg"
+    "icon": "icons/baldis_fun_new_school.png"
   },
   {
     "name": "Baldi\"s Basics Plus",
     "path": "Baldi\"s Basics Plus.html",
-    "icon": "icons/baldis_basics_plus.jpg"
+    "icon": "icons/baldis_basics_plus.png"
   },
   {
     "name": "Space Waves",
@@ -287,6 +287,6 @@
   {
     "name": "Baldi\"s Basics Remastered",
     "path": "Baldi\"s Basics Remastered.html",
-    "icon": "icons/baldis_basics_remastered.jpg"
+    "icon": "icons/baldis_basics_remastered.png"
   }
 ]
