@@ -265,11 +265,6 @@
     "icon": "icons/wordle.png"
   },
   {
-    "name": "Tag",
-    "path": "Tag.html",
-    "icon": "icons/tag.png"
-  },
-  {
     "name": "Baldi's Fun New School",
     "path": "Baldi's Fun New School.html",
     "icon": "icons/baldis_fun_new_school.png"
