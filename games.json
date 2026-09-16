@@ -31,7 +31,7 @@
   },
   {
     "name": "BitLife",
-    "path": "clbitlife.html",
+    "path": "Bitlife.html",
     "icon": "icons/bitlife.png"
   },
   {
@@ -230,11 +230,6 @@
     "icon": "icons/surf_go.png"
   },
   {
-    "name": "Tag",
-    "path": "tag/index.html",
-    "icon": "icons/tag.png"
-  },
-  {
     "name": "The Impossible Quiz",
     "path": "Impossible Quiz.html",
     "icon": "icons/impossible_quiz.png"
@@ -283,5 +278,45 @@
     "name": "Baldi's Basics Remastered",
     "path": "Baldi's Basics Remastered.html",
     "icon": "icons/baldis_basics_remastered.png"
+  },
+  {
+    "name": "Tag",
+    "path": "Tag.html",
+    "icon": "icons/tag.png"
+  },
+  {
+    "name": "Hollow Knight Silksong",
+    "path": "Hollow Knight Silksong.html",
+    "icon": "icons/hollow_knight_silksong.png"
+  },
+  {
+    "name": "Caseohs Basics",
+    "path": "Caseoh's Basics in eating and fastfood.html",
+    "icon": "icons/caseohs_basics.png"
+  },
+  {
+    "name": "Angry Neighbor",
+    "path": "Angry Neighbor.html",
+    "icon": "icons/angry_neighbor.png"
+  },
+  {
+    "name": "Candy Jump",
+    "path": "Candy Jump.html",
+    "icon": "icons/candy_jump.jpg"
+  },
+  {
+    "name": "Baldis Basics Squared",
+    "path": "Baldi's Basics Squared.html",
+    "icon": "icons/baldis_basics_squared.png"
+  },
+  {
+    "name": "Bottle Flip 3D",
+    "path": "Bottle Flip 3D.html",
+    "icon": "icons/bottle_flip_3d.jpg"
+  },
+  {
+    "name": "Real Gangster Crime",
+    "path": "Real Gangster Crime.html",
+    "icon": "icons/real_gangster_crime.jpg"
   }
 ]
