@@ -318,5 +318,35 @@
     "name": "Real Gangster Crime",
     "path": "Real Gangster Crime.html",
     "icon": "icons/real_gangster_crime.jpg"
+  },
+  {
+    "name": "Buckshot Roulette",
+    "path": "Buckshot Roulette.html",
+    "icon": "icons/buckshot_roulette.png"
+  },
+  {
+    "name": "Five Nights at Freddy's 3",
+    "path": "Five Nights At Freddys 3.html",
+    "icon": "icons/fnaf3.png"
+  },
+  {
+    "name": "Five Nights at Freddy's 4",
+    "path": "Five Nights At Freddys 4.html",
+    "icon": "icons/fnaf4.png"
+  },
+  {
+    "name": "Happy Wheels",
+    "path": "Happy Wheels.html",
+    "icon": "icons/happy_wheels.png"
+  },
+  {
+    "name": "Ragdoll Archers",
+    "path": "Ragdoll Archers.html",
+    "icon": "icons/ragdoll_archers.png"
+  },
+  {
+    "name": "Undertale: Last Breath",
+    "path": "Undertale: Last Breath.html",
+    "icon": "icons/undertale_last_breath.png"
   }
 ]
